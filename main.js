@@ -1,47 +1,17 @@
-//trial logic
 
+const convert = require("./services")
 //a map from int to word strings
-const stringNumbers = {
-    "1" : "One",
-    "2" : "Two",
-    "3" : "Three",
-    "4" : "Four",
-    "5" : "Five",
-    "6" : "Six",
-    "7" : "Seven",
-    "8" : "Eight",
-    "9" : "Nine" ,
-    "0" : "Zero"
-}
+
 var arr = [3,25,209]
 
-//helper method for each number
-const convertStringToNumString = (number) =>{
-    number = number.toString()
-    var retString = "";
-    for(var i =0; i<number.length;i++){
-        //console.log(number[i])
-        retString += stringNumbers[number[i]]
-    }
-    return retString;
+var inputArgs = process.argv.slice(2)
+console.log(inputArgs)
 
-}
 
-console.log(convertStringToNumString(101))
+console.log(convert(inputArgs))
+//console.log(convertStringToNumString(101))
 
-//converts the given array
-const convertToNumbers = (arr) =>{
-    //return arrray that stores the final arrays of converted numbers
-    var retArray = []
-    for(var i =0;i<arr.length;i++){
-        var num = arr[i];
-        //console.log(num , typeof num)
-        retArray.push(convertStringToNumString(num))
-    }
 
-    return retArray;
-}
+//var ans = convertToNumbers(arr)
 
-var ans = convertToNumbers(arr)
-
-console.log(ans)
+//console.log(ans)
