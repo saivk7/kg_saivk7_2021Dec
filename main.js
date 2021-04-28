@@ -2,8 +2,6 @@
 const convert = require("./services")
 //a map from int to word strings
 
-var arr = [3,25,209]
-
 var inputArgs = process.argv.slice(2)
 
 if(inputArgs.length<1){

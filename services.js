@@ -11,15 +11,16 @@ const stringNumbers = {
     "7" : "Seven",
     "8" : "Eight",
     "9" : "Nine" ,
-    "0" : "Zero"
+    "0" : "Zero",
+    "." : "Point"
 }
 
-//helper method for each number
+//helper method for converting each number
 const convertStringToNumString = (number) =>{
     //number = number.toString() //input number is already as string
+    //retString stores the converted string number
     var retString = "";
     for(var i =0; i<number.length;i++){
-        //console.log(number[i])
         retString += stringNumbers[number[i]]
     }
     return retString;
