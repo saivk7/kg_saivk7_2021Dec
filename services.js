@@ -14,11 +14,9 @@ const stringNumbers = {
     "0" : "Zero"
 }
 
-
-
 //helper method for each number
 const convertStringToNumString = (number) =>{
-    number = number.toString()
+    //number = number.toString() //input number is already as string
     var retString = "";
     for(var i =0; i<number.length;i++){
         //console.log(number[i])
@@ -41,6 +39,7 @@ const convertToNumbers = (arr) =>{
 
     return retArray;
 }
+
 
 
 module.exports = convertToNumbers;

@@ -5,13 +5,13 @@ const convert = require("./services")
 var arr = [3,25,209]
 
 var inputArgs = process.argv.slice(2)
-console.log(inputArgs)
+
+if(inputArgs.length<1){
+    console.error("No numbers found, Enter some numbers...")
+    process.exit(1)
+}
+
+//console.log(inputArgs)
 
 
-console.log(convert(inputArgs))
-//console.log(convertStringToNumString(101))
-
-
-//var ans = convertToNumbers(arr)
-
-//console.log(ans)
+console.log(...convert(inputArgs))
